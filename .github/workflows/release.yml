@@ -63,7 +63,8 @@ jobs:
     uses: ./.github/workflows/publish-images.yaml
     with:
       version: ${{ needs.version.outputs.tag }}
-    secrets: inherit
+    secrets:
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
   release:
     name: Create Release

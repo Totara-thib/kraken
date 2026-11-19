@@ -11,6 +11,9 @@ on:
         description: 'Image tag. Defaults to git describe.'
         required: false
         type: string
+    secrets:
+      DOCKERHUB_TOKEN:
+        required: true
 
 concurrency:
   group: publish-images
